@@ -1,0 +1,39 @@
+{
+  "id": 7033,
+  "uid": "eecefad8-bb37-496c-9049-fae5a0fb4e42",
+  "password": "6bIhpzxms0",
+  "first_name": "Valentine",
+  "last_name": "Russel",
+  "username": "valentine.russel",
+  "email": "valentine.russel@email.com",
+  "avatar": "https://robohash.org/accusantiumdoloremquibusdam.png?size=300x300&set=set1",
+  "gender": "Agender",
+  "phone_number": "+971 210-541-6559 x6657",
+  "social_insurance_number": "339482721",
+  "date_of_birth": "1997-12-14",
+  "employment": {
+    "title": "Design Developer",
+    "key_skill": "Self-motivated"
+  },
+  "address": {
+    "city": "Lake Colton",
+    "street_name": "Stoltenberg Burg",
+    "street_address": "10985 Berniece Tunnel",
+    "zip_code": "80743-2415",
+    "state": "Arizona",
+    "country": "United States",
+    "coordinates": {
+      "lat": 19.10527430335965,
+      "lng": -171.08068409400775
+    }
+  },
+  "credit_card": {
+    "cc_number": "6771-8958-8219-6261"
+  },
+  "subscription": {
+    "plan": "Gold",
+    "status": "Active",
+    "payment_method": "Apple Pay",
+    "term": "Payment in advance"
+  }
+}

@@ -32,34 +32,24 @@ struct ContentView: View {
     
     func onTap() {
         let usersEndpoint = "/api/v2/users"
-        let url = URL(string: apiUrl().absoluteString + usersEndpoint)!
-        let task = URLSession.shared.dataTask(with:  url) {(data, response, error) in
-            guard let data = data else { return }
-            
+        let task = URLSession.shared.dataTask(with:  apiUrl(usersEndpoint)) {(data, response, error) in
+            let json = String(data: data!, encoding: .utf8)!.json
+            text = json["first_name"] as! String
             userCurrentStatus = userLoggedIn
-            text = String(data: data, encoding: .utf8)?.json["first_name"] as! String
             usernameIdentifier = "username"
-            print("\nGAME STARTED 🏈\n\(String(data: data, encoding: .utf8)!)")
+            print("\nGAME STARTED 🏈\n\(json.toString(prettyPrinted: true))")
         }
         task.resume()
     }
     
-    //    THEN: original source code
-    //    func apiUrl() -> URL {
-    //        let urlString = "https://random-data-api.com"
-    //        let url = URL(string: urlString)!
-    //        return url
-    //    }
-        
-    //    NOW: modified source code
-    func apiUrl() -> URL {
+    func apiUrl(_ endpoint: String) -> URL {
         var urlString = "https://random-data-api.com"
         #if DEBUG
           if ProcessInfo.processInfo.arguments.contains("MOCK_SERVER") {
               urlString = "http://localhost:4567"
           }
         #endif
-        let url = URL(string: urlString)!
+        let url = URL(string: urlString + endpoint)!
         return url
     }
 }

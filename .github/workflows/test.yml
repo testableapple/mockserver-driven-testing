@@ -1,0 +1,48 @@
+name: UI Tests
+
+on:
+  push:
+    branches:
+      - main
+
+  workflow_dispatch:
+
+jobs:
+  native_mock_server:
+    name: Native MockServer
+    runs-on: macos-12
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v2.5.0
+
+      - name: Run UI Tests
+        run: |
+          xcodebuild -project TestMockServer/TestMockServer.xcodeproj \
+                     -scheme NativeMockServerUITests \
+                     -sdk iphonesimulator \
+                     -destination 'platform=iOS Simulator,name=iPhone 12' \
+                     test | xcpretty
+
+  standalone_mock_server:
+    name: Standalone MockServer
+    runs-on: macos-12
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v2.5.0
+
+      - name: Start MockServer
+        run: |
+          gem install sinatra
+          ruby standalone_mock_server.rb &
+
+      - name: Run UI Tests
+        run: |
+          xcodebuild -project TestMockServer/TestMockServer.xcodeproj \
+                     -scheme StandaloneMockServerUITests \
+                     -sdk iphonesimulator \
+                     -destination 'platform=iOS Simulator,name=iPhone 12' \
+                     test | xcpretty
+
+      - name: Stop MockServer
+        if: always()
+        run: lsof -t -i:4567 | xargs kill -9

@@ -53,6 +53,7 @@
 		82ABD108290583E90046DAB6 /* StandaloneMockServerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandaloneMockServerUITests.swift; sourceTree = "<group>"; };
 		82ABD1122905841C0046DAB6 /* NativeMockServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeMockServer.swift; sourceTree = "<group>"; };
 		82ABD115290586D50046DAB6 /* StandaloneMockServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandaloneMockServer.swift; sourceTree = "<group>"; };
+		82FBF07D290E7DE4009644F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +106,7 @@
 		82ABD0C8290566DC0046DAB6 /* TestMockServer */ = {
 			isa = PBXGroup;
 			children = (
+				82FBF07D290E7DE4009644F5 /* Info.plist */,
 				82ABD0C9290566DC0046DAB6 /* TestMockServerApp.swift */,
 				82ABD0CB290566DC0046DAB6 /* ContentView.swift */,
 				82ABD0FD29057B290046DAB6 /* Extensions.swift */,
@@ -453,6 +455,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"TestMockServer/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TestMockServer/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -481,6 +484,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"TestMockServer/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TestMockServer/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

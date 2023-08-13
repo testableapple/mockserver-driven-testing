@@ -1,8 +1,8 @@
-# MockServer-driven development
+# MockServer-driven testing
 
-MSDD (abbreviated from MockServer-driven development, literally "development through a mock server") is a methodology for developing automated UI tests, which is a custom branch of the test-driven development (TDD).
+MockServer-Driven Testing (MSDT) is a methodology for developing automated UI tests, which is a custom branch of the Test Driven Development (TDD) methodology.
 
-The main idea of this methodology is:
+The main idea is:
 
 - to create a mock server that completely replaces the real backend
 - to cover the features supported by a mock server with automated UI tests
